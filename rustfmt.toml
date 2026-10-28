@@ -1,0 +1,2 @@
+# The house style (as relic4-scan): wide lines, so a rule and its reason stay on one line.
+max_width = 130

@@ -1,0 +1,74 @@
+{
+ "type": "object",
+ "x-order": [
+  "type",
+  "focus",
+  "distraction",
+  "work",
+  "agents",
+  "pattern",
+  "en",
+  "th",
+  "friction",
+  "lesson"
+ ],
+ "required": [
+  "type",
+  "focus",
+  "distraction",
+  "work",
+  "agents",
+  "pattern",
+  "en",
+  "th",
+  "friction",
+  "lesson"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "focus": {
+   "description": "the one thing this window was mostly about, one sentence in English",
+   "type": "string"
+  },
+  "type": {
+   "description": "one word: build, fix, research, ops, writing, planning or mixed",
+   "type": "string"
+  },
+  "lesson": {
+   "description": "one lesson learned, one sentence in English, or none",
+   "type": "string"
+  },
+  "friction": {
+   "description": "what went wrong or was corrected, one sentence in English, or none",
+   "type": "string"
+  },
+  "agents": {
+   "description": "what the agents were set to do, one sentence in English",
+   "type": "string"
+  },
+  "distraction": {
+   "description": "what pulled attention away, one sentence in English, or none",
+   "type": "string"
+  },
+  "work": {
+   "items": {
+    "type": "string"
+   },
+   "description": "up to 4 short items in English: what was built, fixed or decided",
+   "type": "array"
+  },
+  "th": {
+   "description": "two-sentence summary in Thai",
+   "type": "string"
+  },
+  "pattern": {
+   "description": "how the person worked, one sentence in English",
+   "type": "string"
+  },
+  "en": {
+   "description": "two-sentence summary in English",
+   "type": "string"
+  }
+ },
+ "title": "Reading"
+}

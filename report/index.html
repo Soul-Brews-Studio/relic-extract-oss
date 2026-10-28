@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relic: a year of agent work, month by month</title>
+<style>/*CSS*/</style>
+</head>
+<body>
+<header>
+  <div class="tools"><button class="theme" id="lang" type="button"></button><button class="theme" id="theme" type="button"></button></div>
+  <h1 id="title"></h1>
+  <p id="intro"></p>
+  <div id="built"></div>
+</header>
+<main id="main"></main>
+<footer id="footer"></footer>
+<script>
+const DATA = /*DATA*/null;
+</script>
+<script>/*I18N*/</script>
+<script>
+(() => {
+  const b = document.getElementById("theme"), order = ["auto", "dark", "light"];
+  let t = localStorage.getItem("relic-report-theme") || "auto";
+  const set = () => {
+    if (t === "auto") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", t);
+    b.textContent = window.t ? window.t("theme", { v: window.t("theme." + t) }) : t;
+  };
+  set();
+  b.onclick = () => { t = order[(order.indexOf(t) + 1) % 3]; localStorage.setItem("relic-report-theme", t); set(); };
+})();
+</script>
+<script>/*JS*/</script>
+</body>
+</html>
